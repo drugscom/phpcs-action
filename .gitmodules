@@ -1,0 +1,6 @@
+[submodule "Standards/PHPCompatibility"]
+	path = Standards/PHPCompatibility
+	url = https://github.com/PHPCompatibility/PHPCompatibility.git
+[submodule "Standards/DDC_CodeSniffer"]
+	path = Standards/DDC_CodeSniffer
+	url = https://github.com/drugscom/DDC_CodeSniffer.git

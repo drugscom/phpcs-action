@@ -1,0 +1,5 @@
+name: 'PHP_CodeSniffer code analysis'
+description: 'PHP static code analysis using PHP_CodeSniffer'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
