@@ -32,5 +32,4 @@ RUN /usr/local/bin/phpcs --config-set 'installed_paths' '/usr/local/shared/phpcs
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
 
-RUN mkdir /app
 WORKDIR /app
