@@ -1,12 +1,15 @@
 #!/bin/sh
 set -o errexit
 
+NUM_CPU=$(grep -c '^processor' /proc/cpuinfo)
+let 'NUM_CPU*=2' || true
+
 REPORT_FILE=$(mktemp)
 
 /usr/local/bin/phpcs \
   --report-full \
   --report-json="${REPORT_FILE}" \
-  --parallel="$(grep -c '^processor' /proc/cpuinfo)" \
+  --parallel="${NUM_CPU}" \
   --extensions='php' \
   -p "${@}" || PHPCS_STATUS=${?}
 
