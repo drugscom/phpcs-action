@@ -6,7 +6,7 @@ REPORT_FILE=$(mktemp)
 /usr/local/bin/phpcs \
   --report-full \
   --report-json="${REPORT_FILE}" \
-  --parallel="$(grep -c '^processor' /proc/cpuinfo)" \
+  --parallel="$(nproc)" \
   --extensions='php' \
   -p "${@}" || PHPCS_STATUS=${?}
 
