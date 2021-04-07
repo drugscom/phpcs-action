@@ -41,8 +41,6 @@ jobs:
           context: .
           file: ${{ matrix.dockerfile }}
           labels: |
-            com.github.actions.name=PHP_CodeSniffer code analysis
-            com.github.actions.description=PHP static code analysis using PHP_CodeSniffer
             org.opencontainers.image.source=${{ github.event.repository.html_url }}
             org.opencontainers.image.revision=${{ github.sha }}
           push: true
