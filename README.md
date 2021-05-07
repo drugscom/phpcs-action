@@ -5,7 +5,7 @@ This action runs PHP static code analysis using PHP_CodeSniffer.
 ## Example usage
 
 ```yaml
-uses: drugscom/phpcs-action@v1
+uses: docker://ghcr.io/drugscom/phpcs-action:1
 with:
   args: --runtime-set 'ignore_warnings_on_exit' 'true'
 ```
