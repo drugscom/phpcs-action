@@ -4,6 +4,9 @@ name: Build image
 'on':
   push:
 
+permissions:
+  packages: write
+
 jobs:
   build_matrix:
     name: Build execution matrix
