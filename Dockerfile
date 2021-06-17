@@ -5,18 +5,18 @@ LABEL 'com.github.actions.description'='PHP static code analysis using PHP_CodeS
 
 RUN apk --no-cache add \
     jq=~1 \
-    php7=~7.4 \
-    php7-ctype=~7.4 \
-    php7-dom=~7.4 \
-    php7-fileinfo=~7.4 \
-    php7-intl=~7.4 \
-    php7-json=~7.4 \
-    php7-phar=~7.4 \
-    php7-simplexml=~7.4 \
-    php7-sockets=~7.4 \
-    php7-tokenizer=~7.4 \
-    php7-xml=~7.4 \
-    php7-xmlwriter=~7.4
+    php8=~8.0 \
+    php8-ctype=~8.0 \
+    php8-dom=~8.0 \
+    php8-fileinfo=~8.0 \
+    php8-intl=~8.0 \
+    php8-phar=~8.0 \
+    php8-simplexml=~8.0 \
+    php8-sockets=~8.0 \
+    php8-tokenizer=~8.0 \
+    php8-xml=~8.0 \
+    php8-xmlwriter=~8.0 \
+    && ln -s /usr/bin/php8 /usr/local/bin/php
 
 RUN wget -q -O /usr/local/bin/phpcs 'https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.8/phpcs.phar' \
     && chmod +x /usr/local/bin/phpcs
