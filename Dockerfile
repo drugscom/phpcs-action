@@ -18,10 +18,10 @@ RUN apk --no-cache add \
     php8-xmlwriter=~8.0 \
     && ln -s /usr/bin/php8 /usr/local/bin/php
 
-RUN wget -q -O /usr/local/bin/phpcs 'https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.8/phpcs.phar' \
+RUN wget -q -O /usr/local/bin/phpcs 'https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.6.0/phpcs.phar' \
     && chmod +x /usr/local/bin/phpcs
 
-RUN wget -q -O /usr/local/bin/phpcbf 'https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.8/phpcbf.phar' \
+RUN wget -q -O /usr/local/bin/phpcbf 'https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.6.0/phpcbf.phar' \
     && chmod +x /usr/local/bin/phpcbf
 
 COPY Standards/DDC_CodeSniffer/DDC /usr/local/shared/phpcs/Standards/DDC
