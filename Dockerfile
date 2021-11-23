@@ -1,4 +1,4 @@
-FROM alpine:3.14.2
+FROM alpine:3.14.3
 
 LABEL 'com.github.actions.name'='PHP_CodeSniffer code analysis'
 LABEL 'com.github.actions.description'='PHP static code analysis using PHP_CodeSniffer'
